@@ -28,9 +28,11 @@ const Pixelate = () => {
         </div>
       </Slider>
       <div className="info-header">
-        <h1>www.pixelate.top</h1>
+        <h1>pixelate.top</h1>
         <p>A digital journal to track a user's daily mood</p>
-        <p className="website-link">website</p>
+        <p className="website-link">
+          <a href="http://pixelate.top">website</a>
+        </p>
       </div>
       <div className="info">
         <p>

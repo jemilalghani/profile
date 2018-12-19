@@ -10,7 +10,7 @@ class Header extends Component {
     this.state = {
       dropMenu: ["all", "resume", "technical", "projects"],
       dropMenuCurrent: "all",
-      active: false,
+      active: true,
       all: [
         "Jemila Al-Ghani",
         "pixelate.top",
@@ -18,7 +18,7 @@ class Header extends Component {
         "technical skills"
       ],
       projects: ["pixelate.top", "airmoment.live"],
-      technical: ["techincal skills"],
+      technical: ["technical skills"],
       resume: ["Jemila Al-Ghani"]
     };
   }
@@ -62,9 +62,19 @@ class Header extends Component {
         <header className="Header-header">
           <h1>Jemila Al-Ghani</h1>
           <ul>
-            <li>about</li>
+            <li
+              onClick={() => this.props.context.updateInfo("selected", "about")}
+            >
+              about
+            </li>
             <li className="divider-header">|</li>
-            <li>contact</li>
+            <li
+              onClick={() =>
+                this.props.context.updateInfo("selected", "contact")
+              }
+            >
+              contact
+            </li>
           </ul>
         </header>
         <div
@@ -78,7 +88,7 @@ class Header extends Component {
         <div className="Header-results">{links}</div>
         <footer>
           <div className="circle" />
-          <p>{moment().format("YYYY-MM-DD")}</p>
+          {/* <p>jemila al-ghani</p> */}
         </footer>
       </div>
     );

@@ -32,9 +32,11 @@ const Moment = () => {
         </div>
       </Slider>
       <div className="info-header">
-        <h1>www.airmoment.live</h1>
+        <h1>airmoment.live</h1>
         <p>A clone of the Airbnb experience page</p>
-        <p className="website-link">website</p>
+        <p className="website-link">
+          <a href="https://airmoment.live/">website</a>
+        </p>
       </div>
       <div className="info">
         <p>

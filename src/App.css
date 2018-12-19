@@ -7,4 +7,6 @@
 }
 .selected {
   width: 50%;
+  /* transform: translateX(550px);
+  transition: transform 0.5s; */
 }
