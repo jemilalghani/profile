@@ -1,0 +1,52 @@
+@import "../variables";
+
+.contact-me {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  margin-top: 20%;
+  border: solid black 1px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-family: $font-regular;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  input {
+    width: 80%;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 3px;
+    border: solid $medium-grey 1px;
+    font-family: $font-regular;
+    color: black;
+  }
+  input::placeholder {
+    font-family: $font-regular;
+    color: black;
+  }
+  textarea {
+    border-radius: 3px;
+    border: solid $medium-grey 1px;
+    resize: none;
+    font-family: $font-regular;
+    color: black;
+  }
+  textarea::placeholder {
+    font-family: $font-regular;
+    color: black;
+  }
+  .send-button {
+    background: $red;
+    border: none;
+    color: white;
+    width: 50%;
+    font-weight: 700;
+    outline: white;
+    cursor: pointer;
+  }
+}

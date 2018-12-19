@@ -51,7 +51,7 @@ class Header extends Component {
         <p
           className="header-links"
           key={index}
-          onClick={() => this.props.context.updateInfo("selected", el)}
+          onClick={() => this.props.context.startAni("selected", el)}
         >
           {el}
         </p>
@@ -63,15 +63,13 @@ class Header extends Component {
           <h1>Jemila Al-Ghani</h1>
           <ul>
             <li
-              onClick={() => this.props.context.updateInfo("selected", "about")}
+              onClick={() => this.props.context.startAni("selected", "about")}
             >
               about
             </li>
             <li className="divider-header">|</li>
             <li
-              onClick={() =>
-                this.props.context.updateInfo("selected", "contact")
-              }
+              onClick={() => this.props.context.startAni("selected", "contact")}
             >
               contact
             </li>

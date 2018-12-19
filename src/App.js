@@ -8,9 +8,13 @@ import Tech from "./Slides/Tech";
 import Home from "./Slides/Home";
 import Contact from "./Slides/Contact";
 import "./reset.css";
-import "./App.css";
+import "./App.scss";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.myRef = React.createRef();
+  }
   render() {
     let array = [
       <Home />,

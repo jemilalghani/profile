@@ -1,0 +1,36 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.selected {
+  width: 50%;
+  overflow: hidden;
+}
+.mount {
+  animation: enter 0.6s;
+  @keyframes enter {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+}
+.unmount {
+  animation: leave 0.6s;
+  @keyframes leave {
+    0% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+}
