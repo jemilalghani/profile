@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import arrow from "./Images/play-button.svg";
 import "./Header.scss";
-import moment from "moment";
+// import moment from "moment";
 import withContext from "./Context_HOC";
+// import linkarrow from "./Images/right-arrow.svg";
+import circle from "./Images/circular-shape-silhouette.svg";
+import github from "./Images/github-logo.svg";
+import linkedin from "./Images/linkedin-logo-button.svg";
 
 class Header extends Component {
   constructor() {
@@ -19,7 +23,8 @@ class Header extends Component {
       ],
       projects: ["pixelate.top", "airmoment.live"],
       technical: ["technical skills"],
-      resume: ["Jemila Al-Ghani"]
+      resume: ["Jemila Al-Ghani"],
+      mouse: false
     };
   }
   handleClick(key, e) {
@@ -48,13 +53,23 @@ class Header extends Component {
     });
     let links = this.state[this.state.dropMenuCurrent].map((el, index) => {
       return (
-        <p
-          className="header-links"
-          key={index}
-          onClick={() => this.props.context.startAni("selected", el)}
-        >
-          {el}
-        </p>
+        <div className="Links">
+          <p
+            className="header-links"
+            key={index}
+            onClick={() => this.props.context.startAni("selected", el)}
+          >
+            {el}
+          </p>
+          <img
+            src={circle}
+            alt=""
+            className="circle"
+            style={{
+              filter: "contrast(200%)"
+            }}
+          />
+        </div>
       );
     });
     return (
@@ -85,8 +100,16 @@ class Header extends Component {
         </div>
         <div className="Header-results">{links}</div>
         <footer>
-          <div className="circle" />
-          {/* <p>jemila al-ghani</p> */}
+          {/* <div className="circle" /> */}
+          <div>
+            <a href="https://www.linkedin.com/in/jemilaalghani/">
+              <img src={linkedin} alt="" width="25" />
+            </a>
+            <a href="https://github.com/jemilalghani/">
+              <img src={github} alt="" width="25" />
+            </a>
+          </div>
+          <p>© AlGHANI</p>
         </footer>
       </div>
     );

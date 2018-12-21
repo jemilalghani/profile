@@ -7,6 +7,7 @@ import css from "../Images/css.png";
 import js from "../Images/js.png";
 import redux from "../Images/redux.png";
 import react from "../Images/apps.png";
+import git from "../Images/Git.png";
 import withContext from "../Context_HOC";
 import "./Tech.scss";
 
@@ -62,6 +63,10 @@ class Tech extends Component {
         <div className="tech-box">
           <img className="tech-logo" src={sass} alt="" />
           <p>Sass</p>
+        </div>
+        <div className="tech-box">
+          <img className="tech-logo" src={git} alt="" />
+          <p>Git</p>
         </div>
       </div>
     );
