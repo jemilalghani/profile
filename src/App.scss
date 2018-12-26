@@ -34,3 +34,20 @@
     }
   }
 }
+@media (max-width: 600px) {
+  .App {
+    display: inherit;
+    overflow: hidden;
+  }
+  .selected {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .unmount,
+  .mount {
+    animation: none;
+  }
+}

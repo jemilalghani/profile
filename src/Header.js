@@ -12,18 +12,12 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      dropMenu: ["all", "resume", "technical", "projects"],
+      dropMenu: ["all", "technical", "projects"],
       dropMenuCurrent: "all",
       active: true,
-      all: [
-        "Jemila Al-Ghani",
-        "pixelate.top",
-        "airmoment.live",
-        "technical skills"
-      ],
+      all: ["pixelate.top", "airmoment.live", "technical skills"],
       projects: ["pixelate.top", "airmoment.live"],
       technical: ["technical skills"],
-      resume: ["Jemila Al-Ghani"],
       mouse: false
     };
   }
@@ -57,7 +51,10 @@ class Header extends Component {
           <p
             className="header-links"
             key={index}
-            onClick={() => this.props.context.startAni("selected", el)}
+            onClick={() => {
+              this.props.context.info("dropdown");
+              this.props.context.startAni("selected", el);
+            }}
           >
             {el}
           </p>
@@ -73,7 +70,9 @@ class Header extends Component {
       );
     });
     return (
-      <div className="Header">
+      <div
+        className={this.props.context.dropdown ? "transform Header" : "Header"}
+      >
         <header className="Header-header">
           <h1>Jemila Al-Ghani</h1>
           <ul>

@@ -23,3 +23,17 @@
     width: 100px;
   }
 }
+.back {
+  display: none;
+}
+@media (max-width: 600px) {
+  .back {
+    display: inline;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+  }
+  .back-gone {
+    display: none;
+  }
+}

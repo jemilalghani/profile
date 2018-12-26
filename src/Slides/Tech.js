@@ -9,6 +9,7 @@ import redux from "../Images/redux.png";
 import react from "../Images/apps.png";
 import git from "../Images/Git.png";
 import withContext from "../Context_HOC";
+import book from "../Images/open-magazine.svg";
 import "./Tech.scss";
 
 class Tech extends Component {
@@ -25,48 +26,53 @@ class Tech extends Component {
     return (
       <div
         className={
-          this.props.context.unmount
-            ? "unmount tech"
-            : this.state.mount
-            ? "mount tech"
-            : "tech"
+          this.props.context.unmount ? "unmount " : this.state.mount && "mount "
         }
       >
-        <div className="tech-box">
-          <img className="tech-logo" src={react} alt="" />
-          <p>React</p>
-        </div>
-        <div className="tech-box">
-          <img className="tech-logo" src={js} alt="" />
-          <p>JavaScript</p>
-        </div>
-        <div className="tech-box">
-          <img className="tech-logo" src={html} alt="" />
-          <p>HTML</p>
-        </div>
-        <div className="tech-box">
-          <img className="tech-logo" src={node} alt="" />
-          <p>Node.js</p>
-        </div>
-        <div className="tech-box">
-          <img className="tech-logo" src={postgresql} alt="" />
-          <p>PostgreSQL</p>
-        </div>
-        <div className="tech-box">
-          <img className="tech-logo" src={css} alt="" />
-          <p>CSS</p>
-        </div>
-        <div className="tech-box">
-          <img className="tech-logo" src={redux} alt="" />
-          <p>Redux</p>
-        </div>
-        <div className="tech-box">
-          <img className="tech-logo" src={sass} alt="" />
-          <p>Sass</p>
-        </div>
-        <div className="tech-box">
-          <img className="tech-logo" src={git} alt="" />
-          <p>Git</p>
+        <header
+          className={this.props.context.dropdown ? "back" : "back-gone"}
+          onClick={() => this.props.context.info("dropdown")}
+        >
+          <img src={book} width="30" alt="back" />
+        </header>
+
+        <div className={"tech"}>
+          <div className="tech-box">
+            <img className="tech-logo" src={react} alt="" />
+            <p>React</p>
+          </div>
+          <div className="tech-box">
+            <img className="tech-logo" src={js} alt="" />
+            <p>JavaScript</p>
+          </div>
+          <div className="tech-box">
+            <img className="tech-logo" src={html} alt="" />
+            <p>HTML</p>
+          </div>
+          <div className="tech-box">
+            <img className="tech-logo" src={node} alt="" />
+            <p>Node.js</p>
+          </div>
+          <div className="tech-box">
+            <img className="tech-logo" src={postgresql} alt="" />
+            <p>PostgreSQL</p>
+          </div>
+          <div className="tech-box">
+            <img className="tech-logo" src={css} alt="" />
+            <p>CSS</p>
+          </div>
+          <div className="tech-box">
+            <img className="tech-logo" src={redux} alt="" />
+            <p>Redux</p>
+          </div>
+          <div className="tech-box">
+            <img className="tech-logo" src={sass} alt="" />
+            <p>Sass</p>
+          </div>
+          <div className="tech-box">
+            <img className="tech-logo" src={git} alt="" />
+            <p>Git</p>
+          </div>
         </div>
       </div>
     );

@@ -67,8 +67,8 @@ class Contact extends Component {
           placeholder="Subject"
         />
         <textarea
-          cols="49"
-          rows="5"
+          // cols="49"
+          // rows="5"
           onChange={e => this.handleChange("body", e.target.value)}
           required
           placeholder="Message*"
