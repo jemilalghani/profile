@@ -32,17 +32,32 @@ class Header extends Component {
   render() {
     let dropDown = this.state.dropMenu.map((el, index) => {
       if (el !== this.state.dropMenuCurrent) {
-        return (
-          <p
-            key={index}
-            onClick={() => {
-              // this.props.context.updateInfo("selection", index);
-              this.handleClick("dropMenuCurrent", el);
-            }}
-          >
-            {el}
-          </p>
-        );
+        if (el === "technologies") {
+          return (
+            <p
+              key={index}
+              onClick={() => {
+                this.handleClick("dropMenuCurrent", el);
+                this.props.context.startAni("selected", el);
+                this.props.context.info("dropdown");
+              }}
+            >
+              {el}
+            </p>
+          );
+        } else {
+          return (
+            <p
+              key={index}
+              onClick={() => {
+                // this.props.context.updateInfo("selection", index);
+                this.handleClick("dropMenuCurrent", el);
+              }}
+            >
+              {el}
+            </p>
+          );
+        }
       }
     });
     let links = this.state[this.state.dropMenuCurrent].map((el, index) => {
