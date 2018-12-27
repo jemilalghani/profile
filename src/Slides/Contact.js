@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import withContext from "../Context_HOC";
 import "./Contact.scss";
+import book from "../Images/open-magazine.svg";
 
 class Contact extends Component {
   constructor() {
@@ -37,44 +38,51 @@ class Contact extends Component {
   render() {
     console.log(this.props.context);
     return (
-      <form
-        onSubmit={() => this.sendEmail()}
+      <div
         className={
           this.props.context.unmount
-            ? "unmount contact-me"
+            ? "unmount contains"
             : this.state.mount
-            ? "mount contact-me"
-            : "contact-me"
+            ? "mount contains"
+            : "contains"
         }
       >
-        <h2>Contact</h2>
-        {/* <p>Name</p> */}
-        <input
-          onChange={e => this.handleChange("name", e.target.value)}
-          placeholder="Name*"
-          required
-        />
-        {/* <p>Email Address</p> */}
-        <input
-          onChange={e => this.handleChange("email", e.target.value)}
-          placeholder="Email Address*"
-          required
-        />
+        <form onSubmit={() => this.sendEmail()} className="contact-me">
+          <h2>Contact</h2>
+          {/* <p>Name</p> */}
+          <input
+            onChange={e => this.handleChange("name", e.target.value)}
+            placeholder="Name*"
+            required
+          />
+          {/* <p>Email Address</p> */}
+          <input
+            onChange={e => this.handleChange("email", e.target.value)}
+            placeholder="Email Address*"
+            required
+          />
 
-        {/* <p>Subject</p> */}
-        <input
-          onChange={e => this.handleChange("subject", e.target.value)}
-          placeholder="Subject"
-        />
-        <textarea
-          // cols="49"
-          // rows="5"
-          onChange={e => this.handleChange("body", e.target.value)}
-          required
-          placeholder="Message*"
-        />
-        <input className="send-button" type="submit" value="Send" />
-      </form>
+          {/* <p>Subject</p> */}
+          <input
+            onChange={e => this.handleChange("subject", e.target.value)}
+            placeholder="Subject"
+          />
+          <textarea
+            // cols="49"
+            // rows="5"
+            onChange={e => this.handleChange("body", e.target.value)}
+            required
+            placeholder="Message*"
+          />
+          <input className="send-button" type="submit" value="Send" />
+        </form>
+        <footer
+          className={this.props.context.dropdown ? "back" : "back-gone"}
+          onClick={() => this.props.context.info("dropdown")}
+        >
+          <img src={book} width="30" alt="back" />
+        </footer>
+      </div>
     );
   }
 }

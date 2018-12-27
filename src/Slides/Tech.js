@@ -26,16 +26,13 @@ class Tech extends Component {
     return (
       <div
         className={
-          this.props.context.unmount ? "unmount " : this.state.mount && "mount "
+          this.props.context.unmount
+            ? "unmount contains"
+            : this.state.mount
+            ? "mount contains"
+            : "contains"
         }
       >
-        <header
-          className={this.props.context.dropdown ? "back" : "back-gone"}
-          onClick={() => this.props.context.info("dropdown")}
-        >
-          <img src={book} width="30" alt="back" />
-        </header>
-
         <div className={"tech"}>
           <div className="tech-box">
             <img className="tech-logo" src={react} alt="" />
@@ -74,6 +71,12 @@ class Tech extends Component {
             <p>Git</p>
           </div>
         </div>
+        <footer
+          className={this.props.context.dropdown ? "back" : "back-gone"}
+          onClick={() => this.props.context.info("dropdown")}
+        >
+          <img src={book} width="30" alt="back" />
+        </footer>
       </div>
     );
   }

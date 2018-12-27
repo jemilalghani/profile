@@ -74,6 +74,7 @@
     margin: auto 10px;
     font-family: "Staatliches", cursive;
     letter-spacing: 3px;
+    cursor: pointer;
   }
   .drop-menu,
   .drop-menu-open {
@@ -145,19 +146,39 @@
   .Header {
     width: 100%;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 1;
     left: 0;
     top: 0;
     background: white;
-    transition: width 0.6s;
+    transition: width 0.6s ease-out;
+    overflow-x: hidden;
+    header {
+      min-width: 100%;
+    }
+    .header-links {
+      overflow: hidden;
+      min-width: 100%;
+    }
     footer {
       width: 100%;
+      div {
+        min-width: 70px;
+      }
     }
   }
+  h1 {
+    overflow: hidden;
+    min-width: 300px;
+  }
   .transform {
-    // transition: 0.5s;
     width: 0%;
-    transition: width 0.6s;
+    transition: width 0.5s ease-out;
     overflow-x: hidden;
+  }
+}
+@media (max-width: 440px) {
+  h1 {
+    font-size: 25px;
+    min-width: 200px;
   }
 }

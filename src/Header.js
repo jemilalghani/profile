@@ -12,12 +12,12 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      dropMenu: ["all", "technical", "projects"],
+      dropMenu: ["all", "technologies", "projects"],
       dropMenuCurrent: "all",
       active: true,
-      all: ["pixelate.top", "airmoment.live", "technical skills"],
+      all: ["pixelate.top", "airmoment.live", "technologies"],
       projects: ["pixelate.top", "airmoment.live"],
-      technical: ["technical skills"],
+      technologies: ["technologies"],
       mouse: false
     };
   }
@@ -74,16 +74,29 @@ class Header extends Component {
         className={this.props.context.dropdown ? "transform Header" : "Header"}
       >
         <header className="Header-header">
-          <h1>Jemila Al-Ghani</h1>
+          <h1
+            onClick={() => {
+              this.props.context.startAni("selected", "about");
+              this.props.context.info("dropdown");
+            }}
+          >
+            Jemila Al-Ghani
+          </h1>
           <ul>
             <li
-              onClick={() => this.props.context.startAni("selected", "about")}
+              onClick={() => {
+                this.props.context.startAni("selected", "about");
+                this.props.context.info("dropdown");
+              }}
             >
               about
             </li>
             <li className="divider-header">|</li>
             <li
-              onClick={() => this.props.context.startAni("selected", "contact")}
+              onClick={() => {
+                this.props.context.startAni("selected", "contact");
+                this.props.context.info("dropdown");
+              }}
             >
               contact
             </li>
