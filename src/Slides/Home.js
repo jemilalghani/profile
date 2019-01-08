@@ -29,11 +29,11 @@ class Home extends Component {
           <img src={me} alt="" style={{ borderRadius: "3px" }} />
           <h1>Jemila Kibibi Al-Ghani</h1>
           <p>
-            I’m a passionate and inquisitive Web Developer and UX Designer based
-            in Oakland, California. I studied Mathematics at Wesleyan
-            University, where I also started my web development journey. With my
-            combined knowledge of mathematics and development, I am seeking a
-            full-time development position.
+            I’m a passionate and inquisitive Web Developer based in Oakland,
+            California. I studied Mathematics at Wesleyan University, where I
+            also started my web development journey. With my combined knowledge
+            of mathematics and development, I am seeking a full-time development
+            position.
           </p>
         </div>
         <footer
