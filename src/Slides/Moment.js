@@ -6,6 +6,7 @@ import review from "../Images/Review.png";
 import moment from "../Images/Moment.png";
 import withContext from "../Context_HOC";
 import book from "../Images/open-magazine.svg";
+import arrow from "../Images/arrow-logo.svg";
 
 class Moment extends Component {
   constructor() {
@@ -70,7 +71,12 @@ class Moment extends Component {
           className={this.props.context.dropdown ? "back" : "back-gone"}
           onClick={() => this.props.context.info("dropdown")}
         >
-          <img src={book} width="30" alt="back" />
+          <img
+            src={arrow}
+            width="30"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
         </footer>
       </div>
     );

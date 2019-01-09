@@ -3,6 +3,7 @@ import "./Home.scss";
 import withContext from "../Context_HOC";
 import me from "../Images/IMG_7043.JPG";
 import book from "../Images/open-magazine.svg";
+import arrow from "../Images/arrow-logo.svg";
 
 class Home extends Component {
   constructor() {
@@ -40,7 +41,12 @@ class Home extends Component {
           className={this.props.context.dropdown ? "back" : "back-gone"}
           onClick={() => this.props.context.info("dropdown")}
         >
-          <img src={book} width="30" alt="back" />
+          <img
+            src={arrow}
+            width="30"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
         </footer>
       </div>
     );

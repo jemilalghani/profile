@@ -6,6 +6,7 @@ import userchart from "../Images/UserChart.png";
 import mobile from "../Images/MobilePixelate.png";
 import withContext from "../Context_HOC";
 import book from "../Images/open-magazine.svg";
+import arrow from "../Images/arrow-logo.svg";
 
 class Pixelate extends Component {
   constructor() {
@@ -69,7 +70,12 @@ class Pixelate extends Component {
           className={this.props.context.dropdown ? "back" : "back-gone"}
           onClick={() => this.props.context.info("dropdown")}
         >
-          <img src={book} width="30" alt="back" />
+          <img
+            src={arrow}
+            width="30"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
         </footer>
       </div>
     );

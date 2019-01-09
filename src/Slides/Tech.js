@@ -9,7 +9,8 @@ import redux from "../Images/redux.png";
 import react from "../Images/apps.png";
 import git from "../Images/Git.png";
 import withContext from "../Context_HOC";
-import book from "../Images/open-magazine.svg";
+// import book from "../Images/open-magazine.svg";
+import arrow from "../Images/arrow-logo.svg";
 import "./Tech.scss";
 
 class Tech extends Component {
@@ -27,10 +28,10 @@ class Tech extends Component {
       <div
         className={
           this.props.context.unmount
-            ? "unmount contains"
+            ? "unmount containstwo"
             : this.state.mount
-            ? "mount contains"
-            : "contains"
+            ? "mount containstwo"
+            : "containstwo"
         }
       >
         <div className={"tech"}>
@@ -75,7 +76,12 @@ class Tech extends Component {
           className={this.props.context.dropdown ? "back" : "back-gone"}
           onClick={() => this.props.context.info("dropdown")}
         >
-          <img src={book} width="30" alt="back" />
+          <img
+            src={arrow}
+            width="30"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
         </footer>
       </div>
     );
