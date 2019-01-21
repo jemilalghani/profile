@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Home.scss";
 import withContext from "../Context_HOC";
-import me from "../Images/IMG_7043.JPG";
+import me from "../Images/IMG_1125.jpeg";
 import book from "../Images/open-magazine.svg";
 import arrow from "../Images/arrow-logo.svg";
 
@@ -27,7 +27,11 @@ class Home extends Component {
         }
       >
         <div className="home">
-          <img src={me} alt="" style={{ borderRadius: "3px" }} />
+          <img
+            src={me}
+            alt=""
+            style={{ borderRadius: "3px", filter: "grayscale(100%)" }}
+          />
           <h1>Jemila Kibibi Al-Ghani</h1>
           <p>
             I’m a passionate and inquisitive Web Developer based in Oakland,

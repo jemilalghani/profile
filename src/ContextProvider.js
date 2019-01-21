@@ -13,10 +13,14 @@ export default class ContextProvider extends React.Component {
   }
   updateInfo = (key, e) => {
     e === "contact" && this.setState({ [key]: 5, unmount: false });
-    // e === "Jemila Al-Ghani" && this.setState({ [key]: 4, unmount: false });
     e === "technologies" && this.setState({ [key]: 3, unmount: false });
+    e === "Technologies" && this.setState({ [key]: 3, unmount: false });
     e === "airmoment.live" && this.setState({ [key]: 2, unmount: false });
+    e === "Project[airmoment.live]" &&
+      this.setState({ [key]: 2, unmount: false });
     e === "pixelate.top" && this.setState({ [key]: 1, unmount: false });
+    e === "Project[pixelate.top]" &&
+      this.setState({ [key]: 1, unmount: false });
     e === "about" && this.setState({ [key]: 0, unmount: false });
   };
   info = key => {

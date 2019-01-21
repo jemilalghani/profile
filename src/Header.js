@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import arrow from "./Images/play-button.svg";
 import "./Header.scss";
-// import moment from "moment";
 import withContext from "./Context_HOC";
-// import linkarrow from "./Images/right-arrow.svg";
 import linkarrow from "./Images/arrow-logo.svg";
-import circle from "./Images/circular-shape-silhouette.svg";
 import github from "./Images/github-logo.svg";
 import linkedin from "./Images/linkedin-logo-button.svg";
 
@@ -16,9 +13,9 @@ class Header extends Component {
       dropMenu: ["all", "technologies", "projects"],
       dropMenuCurrent: "all",
       active: true,
-      all: ["pixelate.top", "airmoment.live", "technologies"],
+      all: ["Project[pixelate.top]", "Project[airmoment.live]", "Technologies"],
       projects: ["pixelate.top", "airmoment.live"],
-      technologies: ["technologies"],
+      technologies: ["Technologies"],
       mouse: false
     };
   }
