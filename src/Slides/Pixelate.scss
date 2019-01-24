@@ -18,21 +18,82 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  margin: 30px 15px 50px 15px;
+  margin: 50px 15px 50px 15px;
+  h1 {
+    margin-bottom: 5px;
+  }
+  .label {
+    color: $medium-grey;
+  }
+  p {
+    margin-top: 10px;
+  }
 }
 .info {
   width: 90%;
   margin: 0 15px 0px 15px;
   height: 50px;
   // border-bottom: solid black 1px;
-  border-top: solid black 1px;
+  border-top: dotted $grey 1px;
   padding: 20px 0px 20px 0;
 
   p {
     line-height: 1.5;
   }
 }
+.slick-dots {
+  margin-left: 40%;
+  width: 170px;
+  height: 15px;
+  border: 1px solid $grey;
+  border-radius: 10px;
+  li {
+    bottom: 35%;
+  }
+}
+.breakdown {
+  width: 90%;
+  margin: 20px auto;
+
+  display: flex;
+  div {
+    font-weight: 600;
+    text-align: end;
+    padding-right: 5px;
+    padding-top: 10px;
+    margin-right: 5px;
+    width: 30%;
+    // border: solid 1px $medium-grey;
+  }
+  ul {
+    width: 50%;
+    border: solid 1px $medium-grey;
+    border-radius: 3px;
+    li {
+      margin: 4px;
+    }
+  }
+}
+.slick-dots:hover {
+  background: $grey;
+}
 .website-link {
   margin: 10px 0 10px 0;
   letter-spacing: 2px;
+  border: solid navy 1px;
+  width: 70px;
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 2px;
+  a {
+    text-decoration: none;
+    color: navy;
+    font-weight: 600;
+  }
+}
+.website-link:hover {
+  background: navy;
+  a {
+    color: white;
+  }
 }

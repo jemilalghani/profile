@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./Home.scss";
 import withContext from "../Context_HOC";
-import me from "../Images/IMG_1125.jpeg";
-import book from "../Images/open-magazine.svg";
+import me from "../Images/ME.jpg";
 import arrow from "../Images/arrow-logo.svg";
 
 class Home extends Component {
@@ -27,19 +26,33 @@ class Home extends Component {
         }
       >
         <div className="home">
-          <img
-            src={me}
-            alt=""
-            style={{ borderRadius: "3px", filter: "grayscale(100%)" }}
-          />
-          <h1>Jemila Kibibi Al-Ghani</h1>
-          <p>
-            I’m a passionate and inquisitive Web Developer based in Oakland,
-            California. I studied Mathematics at Wesleyan University, where I
-            also started my web development journey. With my combined knowledge
-            of mathematics and development, I am seeking a full-time development
-            position.
-          </p>
+          <img src={me} alt="" />
+          <div className="home-info">
+            <h1>WELCOME!</h1>
+            <p className="about-me">
+              I'm Jemila - a passionate Full Stack Web Developer, Oaklander, and
+              doggo lover.
+            </p>
+            <p className="about-me">
+              I work with ReactJS, CSS, SASS, PostgreSQL, and Express.js to name
+              a few. Currently, I'm working on wireframing and prototyping
+              upcoming projects with Adobe XD.{" "}
+            </p>
+            <p className="about-me">
+              Outside of coding, I'm into watching gameplays, hiking, traveling,
+              baking vegan treats, and drinking almond milk matcha lattes 🍵 !{" "}
+            </p>
+            <div className="home-button">
+              <button>
+                <a href="https://www.linkedin.com/in/jemilaalghani/">
+                  LINKEDIN
+                </a>
+              </button>
+              <button>
+                <a href="https://github.com/jemilalghani/">GITHUB</a>
+              </button>
+            </div>
+          </div>
         </div>
         <footer
           className={this.props.context.dropdown ? "back" : "back-gone"}

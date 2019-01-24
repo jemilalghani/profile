@@ -9,7 +9,6 @@ import redux from "../Images/redux.png";
 import react from "../Images/apps.png";
 import git from "../Images/Git.png";
 import withContext from "../Context_HOC";
-// import book from "../Images/open-magazine.svg";
 import arrow from "../Images/arrow-logo.svg";
 import "./Tech.scss";
 

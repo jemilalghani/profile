@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import withContext from "../Context_HOC";
 import "./Contact.scss";
-import book from "../Images/open-magazine.svg";
 import arrow from "../Images/arrow-logo.svg";
 
 class Contact extends Component {
@@ -49,31 +48,31 @@ class Contact extends Component {
         }
       >
         <form onSubmit={() => this.sendEmail()} className="contact-me">
-          <h2>Contact</h2>
+          <h2>Have any questions or comments? </h2>
           {/* <p>Name</p> */}
           <input
             onChange={e => this.handleChange("name", e.target.value)}
-            placeholder="Name*"
+            placeholder=" Name (first, last)*"
             required
           />
           {/* <p>Email Address</p> */}
           <input
             onChange={e => this.handleChange("email", e.target.value)}
-            placeholder="Email Address*"
+            placeholder=" Email Address*"
             required
           />
 
           {/* <p>Subject</p> */}
           <input
             onChange={e => this.handleChange("subject", e.target.value)}
-            placeholder="Subject"
+            placeholder=" Subject"
           />
           <textarea
             // cols="49"
             // rows="5"
             onChange={e => this.handleChange("body", e.target.value)}
             required
-            placeholder="Message*"
+            placeholder=" Message*"
           />
           <input className="send-button" type="submit" value="Send" />
         </form>

@@ -1,131 +1,72 @@
 @import "./variables";
-
 .Header {
   height: 100vh;
-  width: 50%;
-  border-right: $grey 1.2px solid;
+  width: 30%;
+  border-right: $medium-grey 1.2px dotted;
+  // border-right: black 1.2px dotted;
   font-family: $font-regular;
   .header-links {
-    height: 30px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin: 10px 0 10px 0;
+    margin: 5px 15px 0px 15px;
+    font-weight: 500;
+    color: $medium-grey;
     cursor: pointer;
   }
   .header-links:hover {
-    background: black;
-    color: white;
-    animation: onHover 1s;
-    @keyframes onHover {
-      0% {
-        color: grey;
-        background: $grey;
-      }
-      100% {
-        background: black;
-        color: white;
-      }
+    color: navy;
+  }
+  .addition-links {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    cursor: pointer;
+    .addition-p {
+      margin: 0px;
     }
   }
-  // .circle {
-  //   background: $red;
-  //   height: 12px;
-  //   width: 12px;
-  //   border-radius: 100%;
-  //   margin: 0 10px 0 10px;
-  // }
-  footer {
-    height: 40px;
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    border-top: solid black 1px;
+  .footer-header {
+    margin: 20px 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
+    align-content: center;
     a {
-      margin: 0 5px 0 5px;
-    }
-    p {
-      margin-right: 5px;
+      margin: 0 10px 0 10px;
     }
   }
   .Header-results {
-    height: 45%;
-    width: 95%;
-    border-top: black solid 2px;
-    margin: 50px auto;
-    .Links {
-      width: 100%;
-      height: 30px;
-      .linkarrow,
-      .circle {
-        position: relative;
-        width: 15px;
-        top: -34px;
-        left: 95%;
-      }
+    margin: 0px 10px;
+    .header-p {
+      margin: 10px 0;
+      cursor: pointer;
     }
   }
   h1 {
-    // margin: 16px 35px;
-    margin: auto 10px;
+    margin: auto;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     font-family: "Staatliches", cursive;
     letter-spacing: 3px;
     cursor: pointer;
   }
-  .drop-menu,
-  .drop-menu-open {
-    margin: auto;
-    width: 94%;
-    border: black solid 1px;
+  .linksToTrans {
+    height: 0px;
     overflow: hidden;
-    z-index: 5;
-    p {
-      margin: 0 0 20px 10px;
-      width: 15%;
-      cursor: pointer;
-    }
-    p:hover {
-      background: black;
-      color: white;
-    }
-    img {
-      position: relative;
-      left: 95%;
-      top: 12px;
-    }
+    transition: 0.5s ease-in-out;
   }
-  .drop-menu {
-    height: 45px;
-    transition: height 0.5s;
-    img {
-      transform: rotate(90deg);
-      transition: transform 0.5s;
-    }
-  }
-  .drop-menu-open {
-    height: 130px;
-    transition: height 0.5s;
-    img {
-      transform: rotate(270deg);
-      transition: transform 0.5s;
-    }
+  .linkShow {
+    transition: 0.5s ease-in-out;
+    height: 42px;
+    overflow: hidden;
   }
   header {
     width: 100%;
-    height: 80px;
     display: flex;
-    justify-content: space-between;
-    // background: blue;
+    justify-content: flex-start;
     ul {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       width: 50%;
-      // background: white;
       height: 100%;
       margin-right: 10px;
       li {
@@ -167,7 +108,6 @@
     }
   }
   h1 {
-    // overflow: hidden;
     min-width: 300px;
   }
   .transform {

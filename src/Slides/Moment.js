@@ -5,8 +5,8 @@ import register from "../Images/Register.png";
 import review from "../Images/Review.png";
 import moment from "../Images/Moment.png";
 import withContext from "../Context_HOC";
-import book from "../Images/open-magazine.svg";
 import arrow from "../Images/arrow-logo.svg";
+import filter from "../Images/FilterModal.png";
 
 class Moment extends Component {
   constructor() {
@@ -51,20 +51,65 @@ class Moment extends Component {
             <div className="slider">
               <img className="slider" src={host} alt="" />
             </div>
+            <div className="slider">
+              <img className="slider" src={filter} alt="" />
+            </div>
           </Slider>
           <div className="info-header">
             <h1>airmoment.live</h1>
-            <p>A clone of the Airbnb experience page</p>
+            <p className="label">E-COMMERCE </p>
+            <p>
+              A team project to create full stack Airbnb experience page clone
+            </p>
             <p className="website-link">
-              <a href="https://airmoment.live/">website</a>
+              <a href="https://airmoment.live/">live site</a>
             </p>
           </div>
           <div className="info">
-            <p>
-              Technologies used: React, CSS, Context API, Express,
-              Express-Sessions, Massive, RESTful API's, PostgreSQL, Node,
-              Digital Ocean, Nodemailer, Cloudinary, ChartJS, Bcrypt, and Stripe
+            <p style={{ fontWeight: 600, marginBottom: "5px" }}>
+              Technologies used
             </p>
+            <p>
+              React, CSS, Context API, Express, Express-Sessions, Massive,
+              RESTful API's, PostgreSQL, Node, Digital Ocean, Nodemailer,
+              Cloudinary, ChartJS, Bcrypt, and Stripe
+            </p>
+          </div>
+          <div className="breakdown">
+            <div>A USER IS ABLE TO</div>
+            <ul>
+              <li>Login and Logout</li>
+              <li>Register</li>
+              <li>Become a Host</li>
+              <li>View Detailed Experience Summary</li>
+              <li>Purchase an Experience</li>
+              <li>View Purchase History</li>
+              <li>Review Purchased Experiences</li>
+              <li>Search and Filter Experiences</li>
+            </ul>
+          </div>
+          <div className="breakdown">
+            <div>A HOST IS ABLE TO</div>
+            <ul>
+              <li>Be a User</li>
+              <li>Create an Experience</li>
+              <li>View Created Experiences</li>
+            </ul>
+          </div>
+          <div
+            style={{ marginLeft: "15px", color: "$grey", marginBottom: "10px" }}
+          >
+            visit my github repo{" "}
+            <a
+              href="https://github.com/jemilalghani/moment"
+              style={{
+                textDecoration: "none",
+                color: "navy"
+              }}
+            >
+              here
+            </a>
+            !
           </div>
         </div>
         <footer
