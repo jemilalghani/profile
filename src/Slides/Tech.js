@@ -9,7 +9,7 @@ import redux from "../Images/redux.png";
 import react from "../Images/apps.png";
 import git from "../Images/Git.png";
 import withContext from "../Context_HOC";
-import arrow from "../Images/arrow-logo.svg";
+import arrow from "../Images/menu.svg";
 import "./Tech.scss";
 
 class Tech extends Component {
@@ -33,6 +33,17 @@ class Tech extends Component {
             : "containstwo"
         }
       >
+        <header
+          className={this.props.context.dropdown ? "back" : "back-gone"}
+          onClick={() => this.props.context.info("dropdown")}
+        >
+          <img
+            src={arrow}
+            width="25"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
+        </header>
         <div className={"tech"}>
           <div className="tech-box">
             <img className="tech-logo" src={react} alt="" />
@@ -71,17 +82,6 @@ class Tech extends Component {
             <p>Git</p>
           </div>
         </div>
-        <footer
-          className={this.props.context.dropdown ? "back" : "back-gone"}
-          onClick={() => this.props.context.info("dropdown")}
-        >
-          <img
-            src={arrow}
-            width="30"
-            alt="back"
-            style={{ transform: "rotate(180deg)" }}
-          />
-        </footer>
       </div>
     );
   }

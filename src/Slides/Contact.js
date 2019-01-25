@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import withContext from "../Context_HOC";
 import "./Contact.scss";
-import arrow from "../Images/arrow-logo.svg";
+import arrow from "../Images/menu.svg";
 
 class Contact extends Component {
   constructor() {
@@ -47,6 +47,17 @@ class Contact extends Component {
             : "contains"
         }
       >
+        <header
+          className={this.props.context.dropdown ? "back" : "back-gone"}
+          onClick={() => this.props.context.info("dropdown")}
+        >
+          <img
+            src={arrow}
+            width="25"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
+        </header>
         <form onSubmit={() => this.sendEmail()} className="contact-me">
           <h2>Have any questions or comments? </h2>
           {/* <p>Name</p> */}
@@ -76,17 +87,6 @@ class Contact extends Component {
           />
           <input className="send-button" type="submit" value="Send" />
         </form>
-        <footer
-          className={this.props.context.dropdown ? "back" : "back-gone"}
-          onClick={() => this.props.context.info("dropdown")}
-        >
-          <img
-            src={arrow}
-            width="30"
-            alt="back"
-            style={{ transform: "rotate(180deg)" }}
-          />
-        </footer>
       </div>
     );
   }

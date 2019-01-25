@@ -81,14 +81,21 @@
     margin-top: 50px;
   }
   .back {
+    height: 0px;
     cursor: pointer;
     display: inherit;
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    padding: 10px;
-    border: solid black 1px;
+    position: sticky;
+    top: 10px;
+    left: 10px;
     outline: none;
+    z-index: 1;
+
+    img {
+      cursor: pointer;
+      background: white;
+      padding: 8px;
+      border-radius: 100%;
+    }
   }
   .back-gone {
     display: none;

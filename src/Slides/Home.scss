@@ -6,6 +6,7 @@
   padding-top: 90px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   .home-info {
     margin-left: 20px;
     width: 50%;
@@ -35,6 +36,7 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  background: white;
   button {
     border: none;
     margin: 20px;
@@ -54,6 +56,20 @@
     background: navy;
     a {
       color: white;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .home {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    padding-top: 20px;
+    .home-info {
+      width: 90%;
+    }
+    img {
+      height: 300px;
     }
   }
 }

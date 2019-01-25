@@ -5,7 +5,7 @@ import pixelate from "../Images/Pixelate.png";
 import userchart from "../Images/UserChart.png";
 import mobile from "../Images/MobilePixelate.png";
 import withContext from "../Context_HOC";
-import arrow from "../Images/arrow-logo.svg";
+import arrow from "../Images/menu.svg";
 import profile from "../Images/profile.png";
 import modal from "../Images/modal.png";
 
@@ -39,6 +39,17 @@ class Pixelate extends Component {
             : "contains"
         }
       >
+        <header
+          className={this.props.context.dropdown ? "back" : "back-gone"}
+          onClick={() => this.props.context.info("dropdown")}
+        >
+          <img
+            src={arrow}
+            width="25"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
+        </header>
         <div className="pixelate">
           <Slider {...settings}>
             <div className="slider">
@@ -98,7 +109,8 @@ class Pixelate extends Component {
               href="https://github.com/jemilalghani/personal-project"
               style={{
                 textDecoration: "none",
-                color: "navy"
+                color: "navy",
+                fontWeight: "600"
               }}
             >
               here
@@ -106,17 +118,6 @@ class Pixelate extends Component {
             !
           </div>
         </div>
-        <footer
-          className={this.props.context.dropdown ? "back" : "back-gone"}
-          onClick={() => this.props.context.info("dropdown")}
-        >
-          <img
-            src={arrow}
-            width="30"
-            alt="back"
-            style={{ transform: "rotate(180deg)" }}
-          />
-        </footer>
       </div>
     );
   }

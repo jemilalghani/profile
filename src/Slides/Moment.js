@@ -5,7 +5,7 @@ import register from "../Images/Register.png";
 import review from "../Images/Review.png";
 import moment from "../Images/Moment.png";
 import withContext from "../Context_HOC";
-import arrow from "../Images/arrow-logo.svg";
+import arrow from "../Images/menu.svg";
 import filter from "../Images/FilterModal.png";
 
 class Moment extends Component {
@@ -37,6 +37,17 @@ class Moment extends Component {
             : "contains"
         }
       >
+        <header
+          className={this.props.context.dropdown ? "back" : "back-gone"}
+          onClick={() => this.props.context.info("dropdown")}
+        >
+          <img
+            src={arrow}
+            width="25"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
+        </header>
         <div className="pixelate">
           <Slider {...settings}>
             <div className="slider">
@@ -61,7 +72,7 @@ class Moment extends Component {
             <p>
               A team project to create full stack Airbnb experience page clone
             </p>
-            <p className="website-link">
+            <p className="website-link" id="nores">
               <a href="https://airmoment.live/">live site</a>
             </p>
           </div>
@@ -104,7 +115,8 @@ class Moment extends Component {
               href="https://github.com/jemilalghani/moment"
               style={{
                 textDecoration: "none",
-                color: "navy"
+                color: "navy",
+                fontWeight: "600"
               }}
             >
               here
@@ -112,17 +124,6 @@ class Moment extends Component {
             !
           </div>
         </div>
-        <footer
-          className={this.props.context.dropdown ? "back" : "back-gone"}
-          onClick={() => this.props.context.info("dropdown")}
-        >
-          <img
-            src={arrow}
-            width="30"
-            alt="back"
-            style={{ transform: "rotate(180deg)" }}
-          />
-        </footer>
       </div>
     );
   }

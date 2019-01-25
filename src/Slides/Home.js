@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Home.scss";
 import withContext from "../Context_HOC";
 import me from "../Images/ME.jpg";
-import arrow from "../Images/arrow-logo.svg";
+import arrow from "../Images/menu.svg";
 
 class Home extends Component {
   constructor() {
@@ -25,6 +25,17 @@ class Home extends Component {
             : "contains"
         }
       >
+        <header
+          className={this.props.context.dropdown ? "back" : "back-gone"}
+          onClick={() => this.props.context.info("dropdown")}
+        >
+          <img
+            src={arrow}
+            width="25"
+            alt="back"
+            style={{ transform: "rotate(180deg)" }}
+          />
+        </header>
         <div className="home">
           <img src={me} alt="" />
           <div className="home-info">
@@ -54,17 +65,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <footer
-          className={this.props.context.dropdown ? "back" : "back-gone"}
-          onClick={() => this.props.context.info("dropdown")}
-        >
-          <img
-            src={arrow}
-            width="30"
-            alt="back"
-            style={{ transform: "rotate(180deg)" }}
-          />
-        </footer>
       </div>
     );
   }
