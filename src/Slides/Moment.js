@@ -54,7 +54,7 @@ class Moment extends Component {
               <img className="slider" src={moment} alt="" />
             </div>
             <div className="slider">
-              <img className="slider" src={review} alt="" />
+              <img className="slider" src={filter} alt="" />
             </div>
             <div className="slider">
               <img className="slider" src={register} alt="" />
@@ -63,7 +63,7 @@ class Moment extends Component {
               <img className="slider" src={host} alt="" />
             </div>
             <div className="slider">
-              <img className="slider" src={filter} alt="" />
+              <img className="slider" src={review} alt="" />
             </div>
           </Slider>
           <div className="info-header">
@@ -81,9 +81,9 @@ class Moment extends Component {
               Technologies used
             </p>
             <p>
-              React, CSS, Context API, Express, Express-Sessions, Massive,
-              RESTful API's, PostgreSQL, Node, Digital Ocean, Nodemailer,
-              Cloudinary, ChartJS, Bcrypt, and Stripe
+              React, SASS, Context API, Express, Express-Sessions, Massive,
+              PostgreSQL, Node, Digital Ocean, Nodemailer, Cloudinary, Bcrypt,
+              and Stripe
             </p>
           </div>
           <div className="breakdown">
