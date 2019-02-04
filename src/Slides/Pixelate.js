@@ -59,13 +59,13 @@ class Pixelate extends Component {
               <img className="slider" src={userchart} alt="" />
             </div>
             <div className="slider">
+              <img className="slider" src={profile} alt="" />
+            </div>
+            <div className="slider">
               <img className="slider" src={mobile} alt="" />
             </div>
             <div className="slider">
               <img className="slider" src={modal} alt="" />
-            </div>
-            <div className="slider">
-              <img className="slider" src={profile} alt="" />
             </div>
           </Slider>
           <div className="info-header">

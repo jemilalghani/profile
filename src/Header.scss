@@ -15,7 +15,7 @@
     color: navy;
   }
   .addition-links {
-    width: 35%;
+    width: 100px;
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
@@ -111,7 +111,7 @@
     min-width: 300px;
   }
   .transform {
-    width: 0%;
+    width: 0px;
     transition: width 0.5s ease-out;
     overflow-x: hidden;
   }
