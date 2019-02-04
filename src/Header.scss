@@ -107,8 +107,9 @@
       }
     }
   }
-  h1 {
-    min-width: 500px;
+  .header-header > h1 {
+    width: 500px;
+    overflow: hidden;
   }
   .transform {
     width: 0px;
