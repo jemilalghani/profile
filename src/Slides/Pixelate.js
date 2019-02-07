@@ -77,7 +77,13 @@ class Pixelate extends Component {
             </p>
 
             <p className="website-link">
-              <a href="http://pixelate.top">live site</a>
+              <a
+                href="http://pixelate.top"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                live site
+              </a>
             </p>
           </div>
           <div className="info">
@@ -106,6 +112,8 @@ class Pixelate extends Component {
           >
             visit my github repo{" "}
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://github.com/jemilalghani/personal-project"
               style={{
                 textDecoration: "none",

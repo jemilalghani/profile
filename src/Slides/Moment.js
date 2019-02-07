@@ -73,7 +73,13 @@ class Moment extends Component {
               A team project to create full stack Airbnb experience page clone
             </p>
             <p className="website-link" id="nores">
-              <a href="https://airmoment.live/">live site</a>
+              <a
+                href="https://airmoment.live/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                live site
+              </a>
             </p>
           </div>
           <div className="info">
@@ -112,6 +118,8 @@ class Moment extends Component {
           >
             visit my github repo{" "}
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://github.com/jemilalghani/moment"
               style={{
                 textDecoration: "none",

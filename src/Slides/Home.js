@@ -51,16 +51,26 @@ class Home extends Component {
             </p>
             <p className="about-me">
               Outside of coding, I'm into watching gameplays, hiking, traveling,
-              baking vegan treats, and drinking almond milk matcha lattes 🍵 !{" "}
+              baking vegan treats, and drinking almond milk matcha lattes 🍵!{" "}
             </p>
             <div className="home-button">
               <button>
-                <a href="https://www.linkedin.com/in/jemilaalghani/">
+                <a
+                  href="https://www.linkedin.com/in/jemilaalghani/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   LINKEDIN
                 </a>
               </button>
               <button>
-                <a href="https://github.com/jemilalghani/">GITHUB</a>
+                <a
+                  href="https://github.com/jemilalghani/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GITHUB
+                </a>
               </button>
             </div>
           </div>
