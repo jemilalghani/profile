@@ -41,13 +41,12 @@ class Home extends Component {
           <div className="home-info">
             <h1>WELCOME!</h1>
             <p className="about-me">
-              I'm Jemila - a passionate Full Stack Web Developer, Oaklander, and
-              doggo lover.
+              I'm Jemila - a passionate Full Stack Web Developer and Oaklander.
             </p>
             <p className="about-me">
               I work with ReactJS, CSS, SASS, PostgreSQL, and Express.js to name
-              a few. Currently, I'm working on wireframing and prototyping
-              upcoming projects with Adobe XD.{" "}
+              a few. I am seeking a position where administrative, analytical,
+              and software development skills will add value.{" "}
             </p>
             <p className="about-me">
               Outside of coding, I'm into watching gameplays, hiking, traveling,

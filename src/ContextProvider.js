@@ -22,6 +22,7 @@ export default class ContextProvider extends React.Component {
     e === "Project[pixelate.top]" &&
       this.setState({ [key]: 1, unmount: false });
     e === "about" && this.setState({ [key]: 0, unmount: false });
+    e === "Anime Food" && this.setState({ [key]: 4, unmount: false });
   };
   info = key => {
     setTimeout(() => {

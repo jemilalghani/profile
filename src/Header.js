@@ -9,7 +9,7 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      projects: ["airmoment.live", "pixelate.top"]
+      projects: ["Anime Food", "airmoment.live", "pixelate.top"]
     };
   }
   handleClick(key, e) {

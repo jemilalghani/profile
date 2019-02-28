@@ -3,10 +3,11 @@ import Header from "./Header";
 import Pixelate from "./Slides/Pixelate";
 import Moment from "./Slides/Moment";
 import withContext from "./Context_HOC";
-import Resume from "./Slides/Resume";
+// import Resume from "./Slides/Resume";
 import Tech from "./Slides/Tech";
 import Home from "./Slides/Home";
 import Contact from "./Slides/Contact";
+import Anime from "./Slides/Anime";
 import "./reset.css";
 import "./App.scss";
 
@@ -21,7 +22,7 @@ class App extends Component {
       <Pixelate />,
       <Moment />,
       <Tech />,
-      <Resume />,
+      <Anime />,
       <Contact />
     ];
     return (
